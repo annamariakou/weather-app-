@@ -1,3 +1,8 @@
+.weather {
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
 h1 {
     color: #8c8b89;
     color: #8c8b89;
@@ -8,9 +13,11 @@ h1 {
   body {
     font-family: "Space Mono", monospace;
   }
-  h2 {
+
+  .exact-temperature {
     color: #8c8b89;
     text-align: center;
+    margin-bottom: -1.5rem;
   }
   .live {
     color: #8c8b89;
@@ -72,8 +79,10 @@ h1 {
     cursor: pointer;
     color: #8fc351;
   }
-  
-a:link {
-  color: #8fc351;
-}
-  
+
+  .units {
+    position: relative;
+    top: -45px;
+    right: -60px;
+
+  }
