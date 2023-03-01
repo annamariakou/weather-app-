@@ -36,45 +36,54 @@ let month = months[now.getMonth()];
 
 liveTime.innerHTML = `${month} ${date}, ${hours}:${minutes}`;
 
-//Search city - displays on page after submit
-
-//adding for week 5
 
 //Celsius and Farenheit conversion
 
 function temperatureCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temp");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature - 32) / 1.8);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusLink = document.querySelector("#unitOne");
+let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", temperatureCelsius);
 
 function temperatureFarenheit(event) {
   event.preventDefault();
+  
   let temperatureElement = document.querySelector("#temp");
+
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+
   let temperature = temperatureElement.innerHTML;
   temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
 }
 
-let farenheitLink = document.querySelector("#unitTwo");
+
+
+let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", temperatureFarenheit);
+
+let celsiusTemperature = null;
 
 // current temperature
 
 function currentWeather(response) {
   let city = document.querySelector("#cityName");
   let temperature = document.querySelector("#temp");
+
+  celsiusTemperature = response.data.main.temp;
+
   city.innerHTML = response.data.name;
   temperature.innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector("#wind").innerHTML = math.round(response.data.wind.speed);
 }
 
 function search(city) {

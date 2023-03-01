@@ -70,11 +70,8 @@ h1 {
     padding: 40px;
   }
   
-  #unitOne,
-  #unitTwo {
-    cursor: pointer;
-  }
   
+
   #exactLocation {
     cursor: pointer;
     color: #8fc351;
@@ -91,4 +88,19 @@ h1 {
     color:#8c8b89;
     margin-left: 22px;
 
+  }
+
+  .units {
+    cursor: pointer;
+    color:#8fc351;
+  }
+
+  .units .active:hover {
+    text-decoration: none;
+  }
+  
+
+ .units .active {
+    color:#8c8b89;
+    cursor: default;
   }
