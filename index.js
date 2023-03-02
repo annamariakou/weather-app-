@@ -84,14 +84,16 @@ function currentWeather(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = math.round(response.data.wind.speed);
-  
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+
   // weather icon 
-  let iconElement = document.querySelector("#icon");
+
+  let iconElement = document.querySelector("#main-icon");
   iconElement.setAttribute(
     "src",
-    "http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  
 }
 
 
