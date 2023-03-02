@@ -104,3 +104,7 @@ h1 {
     color:#8c8b89;
     cursor: default;
   }
+
+  .icon {
+    width: 10px;
+  }
