@@ -32,15 +32,8 @@ h1 {
     margin: 0 auto;
       } 
 
-  .row {
-    text-align: center;
-    padding: 30px 0 55px 0px;
-  }
+
   
-  .smiley {
-    color: #8fc351;
-    font-size: 40px;
-  }
   
   .location {
     color: #8fc351;
@@ -105,6 +98,25 @@ h1 {
     cursor: default;
   }
 
-  .icon {
-    width: 10px;
+
+  .weather-forecast {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .weather-forecast-date {
+    color: #8c8b89;
+  }
+
+  .weather-forecast-temperature {
+    font-size: 14px;
+  }
+
+  .weather-forecast-temperature-maximum {
+    color: #8c8b89;
+    font-weight: bold;
+  }
+
+  .weather-forecast-temperature-minimum {
+    color: #8fc351;
   }
